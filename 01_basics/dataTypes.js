@@ -11,7 +11,7 @@
 let userEmail; // let userEmail = undefined ;
 const id = Symbol('123')
 const anotherId = Symbol('123')
-console.log(id === anotherId); // false
+// console.log(id === anotherId); // false
 /*
        # Non-Primitive : Reference
 
@@ -25,13 +25,13 @@ console.log(id === anotherId); // false
 
 const heros = ["SubhasChandreBose", "BagatSingh"];
 let obj = {
-    name: "Brajendra",
-    age: 70,
+  name: "Brajendra",
+  age: 70,
 }
 
-const myFunction = function(){
-    console.log("Hello Function");
-    
+const myFunction = function () {
+  console.log("Hello Function");
+
 }
 
 /*
@@ -47,3 +47,35 @@ Object (native or host and does implement [[Call]])	"function"
 Object (host and does not implement [[Call]])	Implementation-defined except may not be "undefined", "boolean", "number", or "string".
 11.4.4
 */
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Memory Management
+//=========================================
+//Stack (Primitive) , Heap (Non-Primitive)
+// Example of Stack memory management
+let nameOne = "Arun"
+let nameTwo = nameOne
+console.log(nameTwo);
+nameTwo = "Suraj"
+
+console.log(nameOne);
+console.log(nameTwo);
+
+// Example of Heap memory management
+
+let userOne = {
+  name : "Rakesh",
+  userEmail: "rakesh@AbortController.com"
+
+}
+
+let userTwo = userOne
+console.log(userOne);
+console.log(userTwo);
+
+userTwo.name = "Rohan"
+userTwo.userEmail = "rohan@AbortController.com"
+
+console.log(userOne);
+console.log(userTwo);
+
