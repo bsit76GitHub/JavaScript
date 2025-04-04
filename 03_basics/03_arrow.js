@@ -5,9 +5,9 @@ const user = {
     price: "999",
 
     welcomeMessage: function () {
-        console.log(`${this.username} , welcome to website`); 
-        console.log(this); 
-        
+        console.log(`${this.username} , welcome to website`);
+        console.log(this);
+
     }
 }
 
@@ -17,11 +17,35 @@ const user = {
 
 // console.log(this) // {}
 
+
+
 // function chai() {
 //     let username = "hitesh"
 //     console.log(this.username); // in function this.username is not working but in object working. Note: this is working. 
-    
+
 // }
 // chai()
 
-//5:41:00
+// const chai = function(){
+//         let username = "hitesh"
+//     console.log(this.username);
+// }
+
+const chai = () => {
+    let username = "hitesh"
+    console.log(this);
+}
+
+// chai()
+
+// const addTwo = (num1, num2) => {
+//     return num1 +num2                     //explicite return
+// }
+
+// const addTwo = (num1, num2) => num1 +num2 //implicite return
+
+// const addTwo = (num1, num2) => (num1 + num2) //implicite return
+
+const addTwo = (num1, num2) => ({username: "hitesh"})
+
+console.log(addTwo(3, 8));
