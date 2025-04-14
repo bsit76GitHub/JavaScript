@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM CreationofElement</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = 'mainDiv'
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute('title', 'generateTille')
+    div.style.backgroundColor = "green"
+    div.style.padding = "20px"
+    // div.innerText = "Main Div"  //innerText firsly take out previous value than after overWrites the value so that it cannot prefer by codder because it take time 
+    // // mean while setAttribute like that methods directly overWrite value
+
+    const addText = document.createTextNode("Chai aur code")
+    div.appendChild(addText)
+
+    document.body.appendChild(div)
+
+</script>
+
+</html>
