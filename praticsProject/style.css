@@ -46,7 +46,16 @@ body{
   background-color: purple;
 }
 
-p{
-  font-weight: bold;
+
+.inputdiv{
+  display: flex; 
+  align-items: center;
+}
+
+#caculatebmi{
+  font-weight: bolder; 
+  width: 30vw; height:30px; 
+  background-color: aqua; 
+  border-radius: 10px;
 }
 
