@@ -1,2 +1,2 @@
 # JavaScript
-JavaScript code
+JavaScript code Learning
