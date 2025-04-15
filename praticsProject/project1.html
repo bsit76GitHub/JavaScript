@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colorSwitcher</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<style>
+#bmicalculator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inputdiv{
+    display: flex; 
+    align-items: center;
+}
+</style>
+<body>
+    <div class="" id="bmicalculator">
+    <h1>BMI Caculator</h1>
+
+        <div class="inputdiv">
+            <p>Height in cm :</p><input type="text" id="height" style="height: 30px;">
+        </div>
+        <div class="inputdiv">
+            <p>Weight in kg :</p><input type="text" id="weight" style="height: 30px;">
+        </div>
+
+        <button style="font-weight: bolder; width: 30vw; height:30px; background-color: aqua; border-radius: 10px;">Calculate</button>
+    
+    <h2>BMI Weight Guide</h2>
+    <p> Under Weight = Less than 18.6<br>
+        Normal Range = 18.6 and 24.9<br>
+        Overweight = Greater than 24.9</p>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
