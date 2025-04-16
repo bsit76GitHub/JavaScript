@@ -11,9 +11,9 @@
 <body>
     <div class="box" id="project1">Project 1 - Color Changer</div>
     <div class="box" id="project2">Project 2 - BMI Calculator</div>
-    <!-- <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div> -->
+    <div class="box" id="project3">Project 3 - Digital Clock</div>
+    <div class="box" id="project4">Project 4 - Guess the Number</div>
+
 
 
 
@@ -42,8 +42,32 @@
             <p> Under Weight = Less than 18.6<br>
                 Normal Range = 18.6 and 24.9<br>
                 Overweight = Greater than 24.9</p>
-
         </form>
+    </div>
+
+    <div class="projectdiv" id="digitalClock">
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div><span>Your Local Time</span></div>
+            <div id="clock"></div>
+        </div>
+    </div>
+
+
+    <div class="" id="">
+        <div class="Project4">
+            <h3>Number Guessing Game</h3>
+            <p>Try and guess a random number between 1 and 100.</p>
+            <p>You hava 10 attempts to guess the right number</p>
+            <form class="form">
+                <label2 for="guessField" id="guess">Guess a Number</label>
+                    <input type="text" id="guessField"
+                        style="margin-top: 20px; padding: 10px; border-radius: 5px; background-color: white;">
+                    <input type="submit" id="submit" value="Submit Guess"
+                        style="margin-top: 20px; padding: 10px; border-radius: 5px; background-color: grey; color: white;">
+            </form>
+            <p>Previous Guesses : <span class="guesses"></span></p>
+            <p>Guesses Remaining : <span class="lastResult">10</span></p>
+        </div>
     </div>
 
 

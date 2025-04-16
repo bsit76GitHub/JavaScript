@@ -5,10 +5,27 @@ project.forEach(function (a) {
         if (e.target.id === 'project1') {
             colorSwitcher.style.display = "block"
             bmicalculator.style.display = 'none'
+            digitalClock.style.display = 'none'
+            guessNumber.style.display = 'none'
         }
         if (e.target.id === 'project2') {
+            colorSwitcher.style.display = 'none'
             bmicalculator.style.display = "block"
-            colorSwitcher.style.display ="none"
+            digitalClock.style.display = 'none'
+            guessNumber.style.display = 'none'
+        }
+        if (e.target.id === 'project3') {
+            colorSwitcher.style.display = "none"
+            bmicalculator.style.display = 'none'
+            digitalClock.style.display = "block"
+            guessNumber.style.display = 'none'
+        }
+        if (e.target.id === 'project4') {
+            colorSwitcher.style.display = "none"
+            bmicalculator.style.display = 'none'
+            digitalClock.style.display = 'none'
+            guessNumber.style.display = "block"
+
         }
     })
 })
@@ -58,10 +75,14 @@ form.addEventListener("submit", function (e) {
             bmiresult.innerText = 'Over Weight'
         }
     }
-   
+
 })
 
-
+const clock = document.getElementById('clock')
+setInterval(function(){
+    let date = new Date();
+    clock.innerHTML = date.toLocaleTimeString();
+},1000)
 
 
 
