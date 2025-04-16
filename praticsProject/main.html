@@ -15,8 +15,6 @@
     <div class="box" id="project4">Project 4 - Guess the Number</div>
 
 
-
-
     <div class="projectdiv" id="colorSwitcher">
         <h1>Color Switcher on click</h1>
         <div>
@@ -53,23 +51,47 @@
     </div>
 
 
-    <div class="" id="">
+    <div class="projectdiv" id="gussingNumber">
         <div class="Project4">
             <h3>Number Guessing Game</h3>
             <p>Try and guess a random number between 1 and 100.</p>
             <p>You hava 10 attempts to guess the right number</p>
-            <form class="form">
-                <label2 for="guessField" id="guess">Guess a Number</label>
-                    <input type="text" id="guessField"
-                        style="margin-top: 20px; padding: 10px; border-radius: 5px; background-color: white;">
-                    <input type="submit" id="submit" value="Submit Guess"
-                        style="margin-top: 20px; padding: 10px; border-radius: 5px; background-color: grey; color: white;">
+            <form class="form"">
+                
+                <label for="guessField" id="guess">Guess a Number</label>
+                <input type="text" id="guessField" class="guessField">
+                <input type="submit" id="submit" class="guessSubmit" value="Submit Guess">
+                
             </form>
+           <div class="resultParas">
             <p>Previous Guesses : <span class="guesses"></span></p>
             <p>Guesses Remaining : <span class="lastResult">10</span></p>
+            <p class="lowOrHi"></p>
+           </div>
+        
         </div>
     </div>
+<!---------------------------------------------------------->
 
+<!-- <div id="wrapper">
+    <h1>Number guessing game</h1>
+  <p>Try and guess a random number between 1 and 100.</p>
+  <p>You have 10 attempts to guess the right number.</p>
+  </br>
+      <form class="form">
+          <label2 for="guessField" id="guess">Guess a number</label>
+          <input type="text" id="guessField" class="guessField">
+          <input type="submit" id="subt" value="Submit guess" class="guessSubmit">
+      </form>
+
+      <div class="resultParas">
+          <p>Previous Guesses: <span class="guesses"></span></p>
+          <p>Guesses Remaining: <span class="lastResult">10</span></p>
+          <p class="lowOrHi"></p>
+      </div>
+  </div> -->
+
+<!---------------------------------------------------------->
 
 </body>
 <script src="script.js"></script>
