@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.html</title>
+</head>
+<style>
+    body {
+        background-color: rgb(47, 42, 42);
+        color: white;
+    }
+</style>
+
+<body>
+    <h1>setInterval and clearInterval</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //  const SayDate = function(){
+    //     console.log("Brajendra", Date.now());
+    //  }
+    //  setInterval(SayDate,1000)
+
+    // const SayDate = function (str) {
+    //     console.log(str, "Brajendra", Date.now());
+    // }
+    // const stopInterval = setInterval(SayDate, 1000, 'Hello')
+    // clearInterval(stopInterval)
+
+    const print = function () {
+        console.log(`Hello`);
+    }
+    let printing;
+    const starPrinting = document.getElementById('start');
+    const stopPrinting = document.getElementById('stop');
+
+    starPrinting.addEventListener("click", function () {
+        printing = setInterval(print, 500,);
+    })
+
+    stopPrinting.addEventListener('click', function () {
+        clearInterval(printing);
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two.html</title>
+</head>
+<style>
+    body {
+        background-color: rgb(47, 42, 42);
+        color: white;
+    }
+</style>
+<body>
+    <h1>setTimeout and clearTimeout</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    // setTimeout(function () {
+    //     console.log('Brajendra');
+    // }, 2000)
+const printName = function () {
+        console.log('Brajendra');
+    }
+// setTimeout(printName, 2000)
+
+const changetext = function(){
+    document.querySelector('h1').innerHTML = "Best JS Series"
+}
+// setTimeout(changetext, 2000)
+
+const changeMe = setTimeout(changetext, 2000)
+// clearTimeout(changeMe)
+
+document.getElementById('stop').addEventListener('click',function(){
+    clearTimeout(changeMe)
+    console.log("STOPPED");
+})
+
+</script>
+</html>
