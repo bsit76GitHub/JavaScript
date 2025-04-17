@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+</head>
+<style>
+    body{
+        background-color: #212121;
+        color: white;
+    }
+    .card{
+        border: solid greenyellow 3px;
+        height: 500px;
+        width: 500px;
+        display: none;
+    }
+
+
+</style>
+<body>
+<button class="button" id="showCard">Card</button>
+<!-- <div class="card">
+    <h3>Details</h3>
+</div> -->
+    
+</body>
+<script>
+    const button = document.querySelector('.button');
+    const card = document.querySelector('.card');
+    button.addEventListener('click',function(){
+        const createCard = document.createElement('div');
+        createCard.style.border = 'solid greenyellow 3px'
+        createCard.style.borderRadius = '10px'
+        // createCard.style.height = '500px'
+        // createCard.style.width = '500px'
+        createCard.innerHTML = `<div class='color'>
+            <table>
+                <tr>
+                    <th>Name </th>
+                    <th>Id</th>
+                    <th>User Name</th>
+                    <th>Avatar Url</th>
+                    <th>Followers</th>
+                    <th>Following</th>
+                </tr>
+                <tr>
+                    <td>${userDetails[0]}</td>
+                    <td>${userDetails[1]}</td>
+                    <td>${userDetails[2]}</td>
+                    <td>${userDetails[3]}</td>
+                    <td>${userDetails[4]}</td>
+                    <td>${userDetails[5]}</td>
+                </tr>
+            </table>
+            `;
+        document.body.appendChild(createCard)
+
+    })
+    let userDetails = [];
+    const requestUrl = 'https://api.github.com/users/bsit76GitHub';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+        // console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText) // to conver string to object
+            // console.log(data);
+            // console.log(typeof data);
+            // console.log(data.name);
+        
+            const name = data.name;
+            const id = data.id;
+            const userName = data.login;
+            const avatar_url = data.avatar_url;
+            const followers = data.followers;
+            const following = data.following;
+          
+           userDetails.push(name);
+           userDetails.push(id);
+           userDetails.push(userName);
+           userDetails.push(avatar_url);
+           userDetails.push(followers);
+           userDetails.push(following);
+        //    console.log(userDetails);
+           
+
+
+        }
+    }
+
+    xhr.send();
+    
+
+</script>
+</html>
