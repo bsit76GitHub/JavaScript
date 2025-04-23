@@ -1,0 +1,69 @@
+<!--  Lexical scoping -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closer</title>
+</head>
+<style>
+    body {
+        background-color: #212121;
+        color: #ffffff;
+    }
+</style>
+
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+
+    // // Lexical scoping
+
+    // function init() {
+    //     let name = "Brajendra"
+    //     function displayName() {
+    //         console.log("Inner function : ",name);
+    //     }
+    //    displayName()
+    // }
+    // init();
+
+
+    // // closure
+
+    // function makefunc() {
+    //     let name = "Brajendra Sharma"
+    //     function displayName() {
+    //         console.log("Inner function : ", name);
+    //     }
+    //     return displayName()
+    // }
+    // const myFunc = makefunc();
+    // myFunc();
+
+</script>
+<script>
+    // document.getElementById('orange').onclick = function(){
+    //     document.body.style.backgroundColor = `orange`
+    // }
+    // document.getElementById('green').onclick = function(){
+    //     document.body.style.backgroundColor = `green`
+    // }
+
+    function clickHandler(color) {
+        //     document.body.style.backgroundColor = `orange` //not working
+
+        return function () {
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+    document.getElementById('orange').onclick = clickHandler("orange")
+    document.getElementById('green').onclick = clickHandler("green")
+
+</script>
+
+</html>
